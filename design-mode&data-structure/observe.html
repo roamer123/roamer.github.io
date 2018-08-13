@@ -1,0 +1,784 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>发布订阅模式 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="command.html" />
+    
+    
+    <link rel="prev" href="iterator.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../network/">
+            
+                <a href="../network/">
+            
+                    
+                    网络
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../network/basic.html">
+            
+                <a href="../network/basic.html">
+            
+                    
+                    网络基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../network/http-protocol.html">
+            
+                <a href="../network/http-protocol.html">
+            
+                    
+                    http协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../network/http-message.html">
+            
+                <a href="../network/http-message.html">
+            
+                    
+                    http报文
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../network/http-header.html">
+            
+                <a href="../network/http-header.html">
+            
+                    
+                    http首部
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../network/web-security.html">
+            
+                <a href="../network/web-security.html">
+            
+                    
+                    web安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../network/web-attack.html">
+            
+                <a href="../network/web-attack.html">
+            
+                    
+                    web攻击
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../performance/">
+            
+                <a href="../performance/">
+            
+                    
+                    性能
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../performance/chrome-F12.html">
+            
+                <a href="../performance/chrome-F12.html">
+            
+                    
+                    chrome
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    设计模式和数据结构
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="single-instance.html">
+            
+                <a href="single-instance.html">
+            
+                    
+                    单例模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="strategy.html">
+            
+                <a href="strategy.html">
+            
+                    
+                    策略模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="proxy.html">
+            
+                <a href="proxy.html">
+            
+                    
+                    代理模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="iterator.html">
+            
+                <a href="iterator.html">
+            
+                    
+                    迭代器模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.5" data-path="observe.html">
+            
+                <a href="observe.html">
+            
+                    
+                    发布订阅模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="command.html">
+            
+                <a href="command.html">
+            
+                    
+                    命令模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="combination.html">
+            
+                <a href="combination.html">
+            
+                    
+                    组合模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="template_method.html">
+            
+                <a href="template_method.html">
+            
+                    
+                    模板方法模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="flyweight.html">
+            
+                <a href="flyweight.html">
+            
+                    
+                    享元模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="responsebility.html">
+            
+                <a href="responsebility.html">
+            
+                    
+                    职责链模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="decorator.html">
+            
+                <a href="decorator.html">
+            
+                    
+                    装饰模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="status.html">
+            
+                <a href="status.html">
+            
+                    
+                    状态模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13" data-path="adapter.html">
+            
+                <a href="adapter.html">
+            
+                    
+                    适配者模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >发布订阅模式</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x53D1;&#x5E03;&#x8BA2;&#x9605;&#x6A21;&#x5F0F;">&#x53D1;&#x5E03;&#x8BA2;&#x9605;&#x6A21;&#x5F0F;</h1>
+<p>  &#x5E94;&#x7528;&#xFF1A;&#x7F51;&#x7AD9;&#x767B;&#x5F55;&#x901A;&#x77E5;&#x6570;&#x636E;&#x548C;&#x6A21;&#x677F;&#x52A0;&#x8F7D;&#xFF0C;&#x5168;&#x5C40;&#x53D1;&#x5E03;&#xFF0C;&#x6A21;&#x5757;&#x95F4;&#x901A;&#x4FE1;</p>
+<h2 id="&#x552E;&#x697C;&#x6837;&#x4F8B;">&#x552E;&#x697C;&#x6837;&#x4F8B;</h2>
+<pre><code>const salesOffices = {};
+
+salesOffices.clientList = {};
+
+salesOffices.listen = function(key, fn){
+    if(!salesOffices.clientList[key]){
+        salesOffices.clientList[key] = [];
+    }
+    salesOffices.clientList[key].push(fn);
+}
+
+salesOffices.trigger = function(){
+    let key = Array.prototype.shift(arguments),
+    fns = this.clientList[key];
+
+    if(!fns || fns.length === 0){
+        return false;
+    }
+
+    for(let i=0; i&lt;fns.length; i++){
+        fn.apply(this, arguments);
+    }
+}
+
+salesOffices.listen(&apos;squareMeter88&apos;, function(price){
+    console.log(&apos;&#x4EF7;&#x683C;=&apos;+price)
+});
+
+salesOffices.trigger(&apos;squareMeter88&apos;, 2000000)
+</code></pre><h2 id="&#x6574;&#x5408;">&#x6574;&#x5408;</h2>
+<pre><code>var observer = {
+    clientList: {},
+    listen: function(key, fn){
+        if(!this.clientList[key]){
+            this.clientList[key] = [];
+        }
+        this.clientList[key].push(fn);
+    },
+    trigger: function(){
+        let key = Array.prototype.shift(arguments),
+        fns = this.clientList[key];
+
+        if(!fns || fns.length === 0){
+            return false;
+        }
+
+        for(let i=0; i&lt;fns.length; i++){
+            fn.apply(this, arguments);
+        }
+    },
+    remove: function(key, fn){
+        let fns = this.clientList[key];
+
+        if(!fns){
+            return false;
+        }
+        if(!fn){
+            fns&amp;&amp;(fns.length=0)
+        }else{
+            for(let l = fns.length-1; l &gt;= 0; i--){
+                let _fn = fns[l];
+                if(_fn === fn){
+                    fns.splice(l, 1)
+                }
+            }
+        }
+    }
+
+}
+</code></pre><h2 id="&#x89E3;&#x51B3;&#x4EE5;&#x4E0B;2&#x4E2A;&#x95EE;&#x9898;">&#x89E3;&#x51B3;&#x4EE5;&#x4E0B;2&#x4E2A;&#x95EE;&#x9898;</h2>
+<ol>
+<li><p>&#x5148;&#x53D1;&#x5E03;&#x540E;&#x8BA2;&#x9605;&#xFF0C;</p>
+</li>
+<li><p>&#x5168;&#x5C40;&#x4E8B;&#x4EF6;&#x547D;&#x540D;&#x51B2;&#x7A81;</p>
+</li>
+</ol>
+<pre><code>/************ &#x5148;&#x53D1;&#x5E03;&#x540E;&#x8BA2;&#x9605; ************/
+
+Event.trigger(&apos;click&apos;, 1);
+
+Event.listen(&apos;click&apos;, function(a){
+    console.log(a)
+});
+
+/*********** &#x4F7F;&#x7528;&#x547D;&#x540D;&#x7A7A;&#x95F4; *************/
+
+Event.create(&apos;namespace1&apos;).listen(&apos;click&apos;, function(a){
+    console.log(a);
+});
+
+Event.create(&apos;namespace1&apos;).trigger(&apos;click&apos;, 1);
+
+Event.create(&apos;namespace2&apos;).listen(&apos;click&apos;, function(a){
+    console.log(a);
+});
+
+Event.create(&apos;namespace2&apos;).trigger(&apos;click&apos;, 1);
+
+/*********** &#x5177;&#x4F53;&#x5B9E;&#x73B0; *************/
+const Event = (function(){
+
+    let global = this,
+        Event,
+        _default = &apos;default&apos;;
+
+    Event = function(){
+        let _listen,
+            _trigger,
+            _remove,
+            _slice = Array.prototype.slice,
+            _shift = Array.prototype.shift,
+            _unshift = Array.prototype._unshift,
+            namespace = {},
+            _create,
+            find,
+            each = function(ary, fn){
+                let ret;
+                Array.from(ary).forEach(function(item, index){
+                    ret = fn.apply(item, index, item);
+                })
+                return ret;
+            };
+
+            _listen = function(key, fn, cache){
+                if(!cache[key]){
+                    cache[key] = []
+                }
+                cache[key].push(fn)
+            }
+
+            _remove = function(key, cache, fn){
+                if(cache[key]){
+                    if(fn){
+                        let index = cache.findIndex(function(item){
+                            return item === fn
+                        });
+
+                        index !== -1 &amp;&amp; cache.splice(index, 1)
+                    }
+                }else{
+                    cache[key] = []
+                }
+            }
+
+            _trigger = function(){
+                const cache = _shift(arguments),
+                      key = _shift(arguments),
+                      args = arguments,
+                      _self = this;
+                let ret, stack = cache[key];
+
+                if(!stack || !stack.length){
+                    return
+                }
+                return each(stack, function(){
+                    this.apply(_self, args);
+                });
+            }
+
+            _create = function(namespace){
+                let namespace = namespace || _default;
+                const cache = {},
+                      offlineStack = [],
+                      ret = {
+                          listen: function(key, fn, last){
+                              _listen(key, fn, last)
+                              if(offlineStack === null){
+                                  return;
+                              }
+                              if(last === &apos;last&apos;){
+                                  offlineStack.length &amp;&amp; offlineStack.pop()();
+                              }else{
+                                  each(offlineStack, function(){
+                                      this();
+                                  });
+                              }
+                              offlineStack = null;
+                          },
+                          one: function(key, fn, last){
+                              _remove(key, cache);
+                              this.listen(key, fn, last);
+                          },
+                          remove: function(key, fn){
+                              _remove(key, cache, fn);
+                          },
+                          trigger: function(){
+                              let fn,
+                                  args,
+                                  _self = this;
+
+                              _unshift.call(arguments, cache);
+                              args = arguments;
+                              fn = function(){
+                                  return _trigger.apply(_self, args);
+                              };
+                              if(offlineStack){
+                                  return offlineStack.push(fn)
+                              }
+                              return fn();
+                          }
+                      };
+
+                      return namespace ?
+                        (namespaceCache[namespace] ? namespaceCache[namespace] :
+                            namespaceCache[namespace] = ret)
+                                : ret;
+
+
+            };
+
+            return {
+                create: _create,
+                one: function(key, fn, last){
+                    let event = this.create();
+                    event.one(key, fn, last);
+                },
+                remove: function(key, fn){
+                    let event = this.create();
+                    event.remove(key, fn);
+                },
+                listen: function(key, fn, last){
+                    let event = this.create();
+                    event.listen(key, fn, last);
+                },
+                trigger:function(){
+                    let event = this.create();
+                    event.trigger.apply(this, arguments);
+                }
+            };
+    };
+
+
+    return Event;
+
+})();
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="iterator.html" class="navigation navigation-prev " aria-label="Previous page: 迭代器模式">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="command.html" class="navigation navigation-next " aria-label="Next page: 命令模式">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"发布订阅模式","level":"1.4.5","depth":2,"next":{"title":"命令模式","level":"1.4.6","depth":2,"path":"design-mode&data-structure/command.md","ref":"design-mode&data-structure/command.md","articles":[]},"previous":{"title":"迭代器模式","level":"1.4.4","depth":2,"path":"design-mode&data-structure/iterator.md","ref":"design-mode&data-structure/iterator.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"design-mode&data-structure/observe.md","mtime":"2018-08-13T12:26:12.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-08-13T12:40:38.431Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
