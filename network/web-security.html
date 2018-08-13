@@ -1,0 +1,374 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>web安全 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="web-attack.html" />
+    
+    
+    <link rel="prev" href="http-header.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    网络
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="basic.html">
+            
+                <a href="basic.html">
+            
+                    
+                    网络基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="http-protocol.html">
+            
+                <a href="http-protocol.html">
+            
+                    
+                    http协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="http-message.html">
+            
+                <a href="http-message.html">
+            
+                    
+                    http报文
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="http-header.html">
+            
+                <a href="http-header.html">
+            
+                    
+                    http首部
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.5" data-path="web-security.html">
+            
+                <a href="web-security.html">
+            
+                    
+                    web安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="web-attack.html">
+            
+                <a href="web-attack.html">
+            
+                    
+                    web攻击
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../设计模式和数据结构/设计模式.md">
+            
+                <span>
+            
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >web安全</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x5B89;&#x5168;">&#x5B89;&#x5168;</h1>
+<h2 id="http&#x7F3A;&#x70B9;">http&#x7F3A;&#x70B9;</h2>
+<ul>
+<li>&#x901A;&#x4FE1;&#x4F7F;&#x7528;&#x660E;&#x6587;&#xFF0C;&#x5185;&#x5BB9;&#x53EF;&#x80FD;&#x88AB;&#x7A83;&#x542C;</li>
+<li>&#x4E0D;&#x9A8C;&#x8BC1;&#x901A;&#x4FE1;&#x65B9;&#x7684;&#x8EAB;&#x4EFD;&#xFF0C;&#x53EF;&#x80FD;&#x906D;&#x9047;&#x4F2A;&#x88C5;</li>
+<li>&#x65E0;&#x6CD5;&#x8BC1;&#x660E;&#x62A5;&#x6587;&#x7684;&#x5B8C;&#x6574;&#x6027;&#xFF0C;&#x6240;&#x4EE5;&#x6709;&#x53EF;&#x80FD;&#x5DF2;&#x7ECF;&#x906D;&#x7BE1;&#x6539;&#x3002;</li>
+</ul>
+<h2 id="&#x52A0;&#x5BC6;&#x53CA;&#x5B8C;&#x6574;&#x6027;">&#x52A0;&#x5BC6;&#x53CA;&#x5B8C;&#x6574;&#x6027;</h2>
+<ul>
+<li><p>&#x901A;&#x8FC7;SSL&#x6216;TLS&#x7684;&#x7EC4;&#x5408;&#x4F7F;&#x7528;&#x52A0;&#x5BC6;Http&#x901A;&#x4FE1;&#x5185;&#x5BB9;&#x3002;</p>
+</li>
+<li><p>&#x5E38;&#x7528;MD5&#x548C;SHA-1&#x7B49;&#x6563;&#x5217;&#x503C;&#x6821;&#x9A8C;&#x65B9;&#x6CD5;&#xFF0C;&#x4EE5;&#x53CA;&#x7528;&#x6765;&#x786E;&#x8BA4;&#x6587;&#x4EF6;&#x7684;&#x6570;&#x5B57;&#x7B7E;&#x540D;&#x65B9;&#x6CD5;</p>
+</li>
+</ul>
+<h2 id="https--http--&#x52A0;&#x5BC6;--&#x8BA4;&#x8BC1;--&#x5B8C;&#x6574;&#x6027;&#x4FDD;&#x62A4;">HTTPS = HTTP + &#x52A0;&#x5BC6; + &#x8BA4;&#x8BC1; + &#x5B8C;&#x6574;&#x6027;&#x4FDD;&#x62A4;</h2>
+<ul>
+<li><p>HTTPS&#x662F;&#x8EAB;&#x62AB;SSL&#x5916;&#x58F3;&#x7684;HTTP</p>
+</li>
+<li><p>SSL&#x91C7;&#x7528;&#x516C;&#x5F00;&#x5BC6;&#x94A5;&#x52A0;&#x5BC6;&#x7684;&#x52A0;&#x5BC6;&#x5904;&#x7406;&#x65B9;&#x5F0F;&#xFF0C;&#x4E5F;&#x66FE;&#x4E3A;&#x975E;&#x5BF9;&#x79F0;&#x5BC6;&#x94A5;&#x52A0;&#x5BC6;&#xFF0C;&#x516C;&#x94A5;&#x516C;&#x5F00;&#xFF0C;&#x5BC6;&#x94A5;&#x79C1;&#x6709;&#x3002;</p>
+</li>
+<li><p>&#x52A0;&#x5BC6;&#x548C;&#x89E3;&#x5BC6;&#x540C;&#x7528;&#x4E00;&#x4E2A;&#x5BC6;&#x94A5;&#x7684;&#x65B9;&#x5F0F;&#x79F0;&#x4E3A;&#x5171;&#x4EAB;&#x5BC6;&#x94A5;&#x52A0;&#x5BC6;&#xFF0C;&#x4E5F;&#x79F0;&#x4E3A;&#x5BF9;&#x79F0;&#x5BC6;&#x94A5;&#x52A0;&#x5BC6;&#x3002;</p>
+</li>
+</ul>
+<h2 id="&#x8BA4;&#x8BC1;">&#x8BA4;&#x8BC1;</h2>
+<p>  HTTP/1.1&#x4F7F;&#x7528;&#x7684;&#x8BA4;&#x8BC1;&#x65B9;&#x5F0F;</p>
+<ul>
+<li><p>BASIC&#x8BA4;&#x8BC1;&#xFF08;&#x57FA;&#x672C;&#x8BA4;&#x8BC1;&#xFF09;</p>
+</li>
+<li><p>DIGEST&#x8BA4;&#x8BC1;&#xFF08;&#x6458;&#x8981;&#x8BA4;&#x8BC1;&#xFF09;</p>
+</li>
+<li><p>SSL&#x5BA2;&#x6237;&#x7AEF;&#x8BA4;&#x8BC1;</p>
+</li>
+<li><p>FormBase&#x8BA4;&#x8BC1;&#xFF08;&#x57FA;&#x4E8E;&#x8868;&#x5355;&#x7684;&#x8BA4;&#x8BC1;&#xFF09;</p>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="http-header.html" class="navigation navigation-prev " aria-label="Previous page: http首部">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="web-attack.html" class="navigation navigation-next " aria-label="Next page: web攻击">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"web安全","level":"1.2.5","depth":2,"next":{"title":"web攻击","level":"1.2.6","depth":2,"path":"network/web-attack.md","ref":"network/web-attack.md","articles":[]},"previous":{"title":"http首部","level":"1.2.4","depth":2,"path":"network/http-header.md","ref":"network/http-header.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"network/web-security.md","mtime":"2018-08-05T07:57:10.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-08-13T07:36:17.728Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
